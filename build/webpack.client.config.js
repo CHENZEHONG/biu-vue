@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const base = require('./webpack.base.config');
 
 module.exports = merge(base, {
+    // mode: 'production',
     entry: {
         client: path.resolve(__dirname, "../src", "entry-client.ts")
     },
@@ -12,6 +13,7 @@ module.exports = merge(base, {
             template: path.resolve(__dirname, "../index.html"),
             filename: 'index.html',
             // publicPath: '/dist/'
+            // publicPath:'./',
             inject: true,
             minify: {
                 removeComments: true,

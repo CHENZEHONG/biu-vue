@@ -285,6 +285,7 @@
                             this.playNoteByKeyCode(keyCode);
                             this.lastKeyCode = keyCode;
                             //    todo
+                            console.log('222')
                         }
                         // if (this.keydownTimer) {
                         //     clearTimeout(this.keydownTimer);

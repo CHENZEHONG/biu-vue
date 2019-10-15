@@ -14,7 +14,7 @@ let mapFile = (name) => {
 export var SampleLibrary = {
     minify: false,
     ext: '.[mp3|ogg]', // use setExt to change the extensions on all files // do not change this variable //
-    baseUrl: '/static/samples/',
+    baseUrl: __dirname + 'static/samples/',
     list: ['piano'],
     onload: null,
 
