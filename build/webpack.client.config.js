@@ -11,7 +11,15 @@ module.exports = merge(base, {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../index.html"),
             filename: 'index.html',
-            publicPath: '/dist/'
+            // publicPath: '/dist/'
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: false,
+                dropConsole: true
+            },
+            chunksSortMode: 'dependency'
         })
     ],
     devServer: {
@@ -22,5 +30,6 @@ module.exports = merge(base, {
         historyApiFallback: {
             index: "index.html"
         }
-    }
+    },
+
 });

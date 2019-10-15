@@ -4,14 +4,19 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",
-
+    // build: {
+    //     index: path.resolve(__dirname, '../dist/index.html'),
+    //     assetsRoot: path.resolve(__dirname, '../dist'),
+    //     assetsSubDirectory: 'static',
+    //     assetsPublicPath: '/'
+    // },
     resolve: {
         extensions: ['.ts', 'tsx', '.js', '.vue', '.json']
     },
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, '../dist'),
-        // publicPath: "./"
+        publicPath: "./"
     },
     module: {
         rules: [
@@ -27,7 +32,7 @@ module.exports = {
         new CopyPlugin([
             {
                 from: path.resolve(__dirname, '../static'),
-                to: './static',
+                to: 'static',
                 ignore: ['.*']
             }
         ])
