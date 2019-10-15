@@ -11,6 +11,7 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, '../dist'),
+        // publicPath: "./"
     },
     module: {
         rules: [
@@ -26,7 +27,7 @@ module.exports = {
         new CopyPlugin([
             {
                 from: path.resolve(__dirname, '../static'),
-                to: 'static',
+                to: './static',
                 ignore: ['.*']
             }
         ])
