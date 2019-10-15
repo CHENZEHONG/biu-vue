@@ -15,7 +15,8 @@ let mapFile = (name) => {
 export var SampleLibrary = {
     minify: false,
     ext: '.[mp3|ogg]', // use setExt to change the extensions on all files // do not change this variable //
-    baseUrl: '/biu-vue/dist/static/samples/',
+    // todo
+    baseUrl: '/biu-vue/static/samples/',
     list: ['piano'],
     onload: null,
 
