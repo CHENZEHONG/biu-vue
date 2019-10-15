@@ -13,7 +13,7 @@ module.exports = merge(base, {
             template: path.resolve(__dirname, "../index.html"),
             filename: 'index.html',
             // publicPath: '/dist/'
-            publicPath:'/',
+            publicPath:'./',
             inject: true,
             minify: {
                 removeComments: true,
