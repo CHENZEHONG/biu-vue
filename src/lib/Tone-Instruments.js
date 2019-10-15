@@ -1,5 +1,6 @@
 import Tone from 'tone'
 import {keysMap} from './keys';
+import path from 'path';
 
 let mapFile = (name) => {
     let file = ''
